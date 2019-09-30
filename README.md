@@ -1,16 +1,27 @@
-/******************************************************************************************************/
+# StarWarsFilm
 
-ESTE ES NUESTRO REPOSITORIO:
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
-Paso:
+## Development server
 
-1. Actualizar con el comando git pull
-2. Agregados con el comando git add .
-3. Le damos commit con el comando git commit -m 'Usa un comentario'
-4. Le damos push y se sube, git push
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-/****************************************************************************************************/
+## Code scaffolding
 
-Despues entramos a la carpeta Back-End
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-con el comando ng serve
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
