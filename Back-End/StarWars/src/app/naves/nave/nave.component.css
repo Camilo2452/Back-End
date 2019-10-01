@@ -1,0 +1,109 @@
+:host {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  :host {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 980px) {
+  :host {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  :host {
+    width: 980px;
+    margin: 0 auto;
+  }
+}
+
+table {
+  border: 1px solid #512c96;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 10px;
+}
+
+table tr {
+  padding: 0.35em;
+  background-color: #f8f8f8;
+}
+
+thead tr {
+  background-color: #c0a1fa;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  border: 1px solid #512c96;
+  text-align: center;
+  word-break: break-all;
+}
+
+table th {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 750px) {
+  table {
+    border: 0;
+    margin: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 1px solid #512c96;
+    display: block;
+    padding: 0;
+  }
+
+  table td {
+    border-bottom: 1px solid #512c96;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+    min-height: 1em;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+#link::after {
+  content: '-';
+}

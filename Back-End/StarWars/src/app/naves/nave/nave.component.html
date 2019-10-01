@@ -1,0 +1,83 @@
+<section>
+  <div class="img-container">
+    <app-slider
+      [imgList]="[
+        'assets/main_ship.png',
+        'assets/companion1.png',
+        'assets/companion2.png'
+      ]"
+    ></app-slider>
+  </div>
+  <div class="container" *ngIf="nave$ | async as nave">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">model</th>
+          <th scope="col">manufacturer</th>
+          <th scope="col">cost_in_credits</th>
+          <th scope="col">length</th>
+          <th scope="col">max_atmospheric_spec</th>
+          <th scope="col">crew</th>
+          <th scope="col">passengers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Name">{{ nave.name }}</td>
+          <td data-label="model">{{ nave.model }}</td>
+          <td data-label="manufacturer">{{ nave.manufacturer }}</td>
+          <td data-label="cost_in_credits">{{ nave.cost_in_credits }}</td>
+          <td data-label="length">{{ nave.length }}</td>
+          <td data-label="max_atmospheric_spec">
+            {{ nave.max_atmospheric_spec }}
+          </td>
+          <td data-label="crew">{{ nave.crew }}</td>
+          <td data-label="passengers">{{ nave.passengers }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">cargo_capacity</th>
+          <th scope="col">consumables</th>
+          <th scope="col">hyperdrive_rating</th>
+          <th scope="col">MGTL</th>
+          <th scope="col">starship_class</th>
+          <th scope="col">pilots</th>
+          <th scope="col">films</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="cargo_capacity">{{ nave.cargo_capacity }}</td>
+          <td data-label="consumables">{{ nave.consumables }}</td>
+          <td data-label="hyperdrive_rating">{{ nave.hyperdrive_rating }}</td>
+          <td data-label="MGTL">{{ nave.MGTL }}</td>
+          <td data-label="starship_class">{{ nave.starship_class }}</td>
+          <td data-label="pilots">
+            <!--
+              Truquillo para poder iterar y crear los links sin tener que meter otro elemento debajo de td
+              y poder colocale el "-" separador excepto al último elemento
+            -->
+            <ng-template ngFor let-i="index" let-pilot [ngForOf]="nave.pilots">
+              <a [href]="pilot" target="_blank" rel="noopener noreferrer">
+                {{ pilot }}
+              </a>
+              <span *ngIf="i < nave.pilots.length - 1"> - </span>
+            </ng-template>
+          </td>
+          <td data-label="films">
+            <ng-template ngFor let-i="index" let-film [ngForOf]="nave.films">
+              <a [href]="film" target="_blank" rel="noopener noreferrer">
+                {{ film }}
+              </a>
+              <span *ngIf="i < nave.films.length - 1"> - </span>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
