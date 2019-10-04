@@ -15,12 +15,23 @@ import { MyTableComponent } from './my-table/my-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MenuNavComponent } from './menu-nav/menu-nav.component';
+import { TablaComponent } from './tabla/tabla.component';
+import { CompanyComponent } from './company/company.component';
+import { HomeComponent } from './home/home.component';
+import { MatTableComponent } from './mat-table/mat-table.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MyNavComponent,
-    MyTableComponent
+    MyTableComponent,
+    MenuNavComponent,
+    TablaComponent,
+    CompanyComponent,
+    HomeComponent,
+    MatTableComponent
   ],
   imports: [
     BrowserModule,
