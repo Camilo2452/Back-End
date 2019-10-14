@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common'
 
 import { NavesRoutingModule } from './naves-routing.module'
 import { NaveComponent } from './nave/nave.component'
-import { SliderComponent } from './slider/slider.component'
+import { SharedModule } from '../shared/shared.module'
 
 @NgModule({
-  declarations: [NaveComponent, SliderComponent],
-  imports: [CommonModule, NavesRoutingModule]
+  declarations: [NaveComponent],
+  imports: [CommonModule, NavesRoutingModule, SharedModule]
 })
 export class NavesModule {}

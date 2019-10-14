@@ -1,0 +1,26 @@
+:host {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  :host {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 980px) {
+  :host {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  :host {
+    width: 980px;
+    margin: 0 auto;
+  }
+}

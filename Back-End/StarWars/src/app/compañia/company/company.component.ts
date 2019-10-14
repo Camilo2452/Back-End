@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ElementRef } from '@angular/core'
 
 @Component({
   selector: 'app-company',
@@ -38,9 +38,11 @@ export class CompanyComponent implements OnInit {
     { tag: 'writing', count: 10, important: false },
     { tag: 'youtube', count: 12, important: false }
   ]
-  constructor() {}
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
+      '#189ad3'
     this.maxValue = this.tags
       .map(tag => tag.count)
       .sort((a, b) => (a > b ? 1 : -1))

@@ -4,8 +4,26 @@
     <li>
       <a>Menu</a>
       <ul class="subnav">
-        <li><a routerLink="#">Characters</a></li>
-        <li><a routerLink="#">Films</a></li>
+        <li>
+          <a routerLink="#">Characters</a>
+          <ul class="itemnav character">
+            <li *ngFor="let personaje of menuPersonajes">
+              <a [routerLink]="personaje.url"
+                >{{ personaje.id }}. {{ personaje.nombre }}</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="#">Films</a>
+          <ul class="itemnav films">
+            <li *ngFor="let pelicula of menuPeliculas">
+              <a [routerLink]="pelicula.url"
+                >{{ pelicula.id }}. {{ pelicula.nombre }}</a
+              >
+            </li>
+          </ul>
+        </li>
         <li>
           <a routerLink="#">Starships</a>
           <!--Convierte la info de las naves en el menú que va a mostrar-->
@@ -15,15 +33,33 @@
             </li>
           </ul>
         </li>
-        <li><a routerLink="#">Vehicles</a></li>
-        <li><a routerLink="#">Species</a></li>
-        <li><a routerLink="#">Planets</a></li>
+        <li>
+          <a routerLink="#">Species</a>
+          <ul class="itemnav species">
+            <li *ngFor="let especie of menuEspecies">
+              <a [routerLink]="especie.url"
+                >{{ especie.id }}. {{ especie.nombre }}</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="#">Planets</a>
+          <ul class="itemnav planets">
+            <li *ngFor="let planeta of menuPlanetas">
+              <a [routerLink]="planeta.url"
+                >{{ planeta.id }}. {{ planeta.nombre }}</a
+              >
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a routerLink="/company">Company</a></li>
     <li><a routerLink="#">Blog</a></li>
     <li><a routerLink="#">Official Store</a></li>
   </ul>
+  <app-searchbox></app-searchbox>
 </nav>
 
 <router-outlet></router-outlet>

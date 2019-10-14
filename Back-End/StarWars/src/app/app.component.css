@@ -1,12 +1,23 @@
 ul,
 ol {
   list-style: none;
+  flex-basis: 66.66%;
   z-index: 100;
 }
 
 .main-menu {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .main-menu {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .nav > li {
@@ -101,4 +112,132 @@ ol {
 
 .itemnav > li:nth-child(odd) a {
   color: white;
+}
+
+/* 
+  Seccion de personajes
+*/
+
+.itemnav.character {
+  scrollbar-color: #a03b00 #f5f5f5;
+}
+
+.itemnav.character::-webkit-scrollbar-thumb {
+  background-color: #a03b00;
+}
+
+.itemnav.character::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.itemnav.character > li:nth-child(odd) {
+  background-color: #196d39;
+}
+
+.itemnav.character > li:nth-child(odd):hover {
+  background-color: #96ffbe;
+}
+
+.itemnav.character > li:nth-child(even) {
+  background-color: #d1560f;
+}
+
+.itemnav.character > li:nth-child(even):hover {
+  background-color: #ffae7f;
+}
+
+/* 
+  Seccion de peliculas
+*/
+
+.itemnav.films {
+  scrollbar-color: #a03b00 #f5f5f5;
+}
+
+.itemnav.character::-webkit-scrollbar-thumb {
+  background-color: #a03b00;
+}
+
+.itemnav.films::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.itemnav.films > li:nth-child(odd) {
+  background-color: #868a87;
+}
+
+.itemnav.films > li:nth-child(odd):hover {
+  background-color: #c3ccc5;
+}
+
+.itemnav.films > li:nth-child(even) {
+  background-color: #f6a87b;
+}
+
+.itemnav.films > li:nth-child(even):hover {
+  background-color: #f3752c;
+}
+
+/* 
+  Seccion de especies
+*/
+
+.itemnav.species {
+  scrollbar-color: #42b45b #f5f5f5;
+}
+
+.itemnav.species::-webkit-scrollbar-thumb {
+  background-color: #42b45b;
+}
+
+.itemnav.species::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.itemnav.species > li:nth-child(odd) {
+  background-color: #22ad45;
+}
+
+.itemnav.species > li:nth-child(odd):hover {
+  background-color: #1ed64c;
+}
+
+.itemnav.species > li:nth-child(even) {
+  background-color: #d7e9db;
+}
+
+.itemnav.species > li:nth-child(even):hover {
+  background-color: #bdcfc1;
+}
+
+/* 
+  Seccion de planetas
+*/
+
+.itemnav.planets {
+  scrollbar-color: #067ec4 #f5f5f5;
+}
+
+.itemnav.planets::-webkit-scrollbar-thumb {
+  background-color: #067ec4;
+}
+
+.itemnav.planets::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+.itemnav.planets > li:nth-child(odd) {
+  background-color: #002366;
+}
+
+.itemnav.planets > li:nth-child(odd):hover {
+  background-color: #6090e9;
+}
+
+.itemnav.planets > li:nth-child(even) {
+  background-color: #d7e9db;
+}
+
+.itemnav.planets > li:nth-child(even):hover {
+  background-color: #eafff4;
 }
