@@ -1,0 +1,28 @@
+<section>
+  <app-slider
+    [imgList]="[
+      'assets/species/species1.png',
+      'assets/species/species2.jpg',
+      'assets/species/species3.png',
+      'assets/species/species4.png'
+    ]"
+  ></app-slider>
+  <div class="container" *ngIf="especie$ | async as especie">
+    <app-table
+      [data]="especie"
+      [keys]="[
+        'name',
+        'classification',
+        'designation',
+        'average_height',
+        'skin_colors',
+        'hair_colors',
+        'eye_colors',
+        'average_lifespan',
+        'homeworld',
+        'language'
+      ]"
+      [linkKeys]="['homeworld']"
+    ></app-table>
+  </div>
+</section>
